@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - NovaTech</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <h2>NovaTech Solutions</h2>
+        </div>
+        <div class="nav-links">
+            <span id="userInfo">Bienvenido</span>
+            <button onclick="logout()" class="btn btn-danger">Cerrar Sesión</button>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Dashboard Principal</h1>
+            <p>Gestión del sistema interno</p>
+        </div>
+        
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Proyectos Activos</h3>
+                <p id="activeProjects">0</p>
+            </div>
+            <div class="card">
+                <h3>Usuarios Registrados</h3>
+                <p id="totalUsers">0</p>
+            </div>
+            <div class="card">
+                <h3>Token Status</h3>
+                <p id="tokenStatus">Verificando...</p>
+            </div>
+        </div>
+        
+        <div class="dashboard-actions">
+            <button onclick="location.href='/projects'" class="btn btn-primary">
+                Gestionar Proyectos
+            </button>
+            <button onclick="testProtectedAPI()" class="btn btn-secondary">
+                Probar API Protegida
+            </button>
+        </div>
+        
+        <div id="apiResponse" class="api-response"></div>
+    </div>
+    
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>

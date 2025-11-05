@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NovaTech</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Iniciar Sesión</h2>
+            <p>Accede al sistema de NovaTech Solutions</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+            </form>
+            
+            <div id="message" class="message"></div>
+            
+            <div class="demo-accounts">
+                <h4>Cuentas de Demo:</h4>
+                <p><strong>Admin:</strong> admin / admin123</p>
+                <p><strong>Usuario:</strong> user / user123</p>
+            </div>
+            
+            <button onclick="location.href='/'" class="btn btn-secondary btn-block">
+                Volver al Inicio
+            </button>
+        </div>
+    </div>
+    
+    <script src="/js/auth.js"></script>
+</body>
+</html>
